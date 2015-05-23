@@ -1,0 +1,7 @@
+<div class="news-widget">
+    <h2>Recent Posts</h2>
+
+    {{#each newsArticle in this}}
+        {{render '-partials/news-article' newsArticle}}
+    {{/each}}
+</div>
