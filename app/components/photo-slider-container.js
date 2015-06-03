@@ -25,7 +25,7 @@ export default Ember.Component.extend({
 			if (this.get('currentSelectedIndex') < this.get('photos.length') - 1) {
 				this.incrementProperty('currentSelectedIndex');
 			} else {
-				this.get('currentSelectedIndex', 0);
+				this.set('currentSelectedIndex', 0);
 			}
 		}
 	}
