@@ -46,7 +46,7 @@ export default Ember.Component.extend({
 		this.set('tickerDiv', ticker);
 
 		Ember.$.ajax({
-			url: this.get('apiurl'),
+			url: this.get('apiUrl'),
 			dataType: 'jsonp',
 			success: this.insertQuotes.bind(this)
 		});
