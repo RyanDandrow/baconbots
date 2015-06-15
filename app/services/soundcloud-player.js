@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Service.extend({
 	currentTrack: null,
 	currentStream: null,
-	volume: 75,
+	volume: 60,
 	paused: true,
 
 	changeVolume: function() {
@@ -30,7 +30,7 @@ export default Ember.Service.extend({
 	},
 
 	togglePause: function () {
-		this.toggleProperty('pasued');
+		this.toggleProperty('paused');
 		this.get('currentStream').togglePause();
 	}
 });

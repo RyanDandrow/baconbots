@@ -17,8 +17,7 @@ export default Ember.Component.extend({
 		this.set('tracks', tracks);
 
 		if (this.get('autoplay')) {
-
-		this.playTrack(tracks[0]);
+			this.playTrack(tracks[0]);
 		}
 	},
 

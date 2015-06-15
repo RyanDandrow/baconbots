@@ -21,7 +21,7 @@ header, .home-page .bottom, .news, .photo-slider-container { *zoom: 1; }
 header:before, .home-page .bottom:before, .news:before, .photo-slider-container:before, header:after, .home-page .bottom:after, .news:after, .photo-slider-container:after { content: ""; display: table; }
 header:after, .home-page .bottom:after, .news:after, .photo-slider-container:after { clear: both; }
 
-header h1, .home-page .bottom .instagram-wall, .home-page .bottom .twitter-widget, .home-page .bottom .news-widget, .news h2, .news .news-index, .news .news-article { margin-left: 1.75439%; float: left; min-height: 1px; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+header h1, .home-page .bottom .instagram-wall, .home-page .bottom .twitter-widget, .home-page .bottom .news-widget, .news h2, .news .news-index, .news .news-article, .soundcloud-tracklist { margin-left: 1.75439%; float: left; min-height: 1px; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .pull_right { float: right; }
 
@@ -345,7 +345,7 @@ html, body { height: 100%; }
 
 .icon-switch.icon-left a:before, .icon-switch.icon-right a:after, i.icon-switch:before { content: "\21c6"; height: inherit; }
 
-.icon-play.icon-left a:before, .icon-play.icon-right a:after, i.icon-play:before { content: "\25b6"; height: inherit; }
+.icon-play.icon-left a:before, .icon-play.icon-right a:after, i.icon-play:before, .soundcloud-tracklist li.soundcloud-track-item .play-status i:before { content: "\25b6"; height: inherit; }
 
 .icon-stop.icon-left a:before, .icon-stop.icon-right a:after, i.icon-stop:before { content: "\25a0"; height: inherit; }
 
@@ -1739,3 +1739,17 @@ header nav ul li a.active { background: #555; }
 .photo-slider-container button.prev { left: 0; }
 .photo-slider-container button.next { right: 0; }
 .photo-slider-container .slider-photo { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+
+.soundcloud-tracklist { width: 49.12281%; list-style-type: none; }
+@media only screen and (max-width: 767px) { .soundcloud-tracklist { float: left; margin-left: 0; width: 100%; } }
+.soundcloud-tracklist li.soundcloud-track-item { padding: 4px 10px; border: 1px #555 solid; border-top: none; cursor: pointer; }
+.soundcloud-tracklist li.soundcloud-track-item:first-of-type { border-top: 1px #555 solid; -moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px; border-top-left-radius: 8px; -moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; border-top-right-radius: 8px; }
+.soundcloud-tracklist li.soundcloud-track-item:last-of-type { -moz-border-radius-bottomleft: 8px; -webkit-border-bottom-left-radius: 8px; border-bottom-left-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px; border-bottom-right-radius: 8px; }
+.soundcloud-tracklist li.soundcloud-track-item .play-status i { opacity: 0; transition: opacity 0.3s ease; }
+.soundcloud-tracklist li.soundcloud-track-item .artist::after { content: " - "; }
+.soundcloud-tracklist li.soundcloud-track-item:hover { background: rgba(255, 255, 255, 0.2); }
+.soundcloud-tracklist li.soundcloud-track-item:hover .play-status i { opacity: 1; }
+.soundcloud-tracklist li.soundcloud-track-item.selected { background: rgba(255, 255, 255, 0.3); }
+
+.soundcloud-controls button { font-size: 30px; font-size: 1.875rem; color: #ccc; background: none; border: none; outline: none; cursor: pointer; }
+.soundcloud-controls button :active { background: none; outline: none; }
